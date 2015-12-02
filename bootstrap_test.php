@@ -166,9 +166,19 @@
 				}
 			});
 			
-			//JASNY BOOTSTRAP OFF CANVAS MANIPULATION
+			//TODO: JASNY BOOTSTRAP OFF CANVAS MANIPULATION
 			
 			
+			
+			// BASIC PAGE SETUP
+			$(document).ready(function() {
+				
+				// IF ON MOBILE CHANGE SITE TITLE TO "IFT"
+			    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+				if (width <= 320) {
+					$(".navbar-brand").text("IFT");
+				}
+			});
 			
 		</script>
 		<!-- END JAVASCRIPT -->
