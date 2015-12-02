@@ -1,6 +1,6 @@
 <?php
 	
-	$parent_page_title = "bootstrap_test.php";
+	$parent_page_title = "readonly.php";
 	include_once('wiki_markdown.php');
 	
 	// Initialize variables
@@ -61,7 +61,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" media="screen" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css">
-		<link rel="stylesheet" href="bootstrap_test.css">
+		<link rel="stylesheet" href="style.css">
 		<title>IFT | Bootstrap | <?php echo $title; ?></title>
 	</head>
 	<body>
