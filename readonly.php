@@ -59,6 +59,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="IFT-Favicon.png">
 		<link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" media="screen" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css">
 		<link rel="stylesheet" href="style.css">
