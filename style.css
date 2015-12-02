@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Avenir", "Lato", sans-serif;
+}
+
+#header {
+	background-color: #C34500;
+	color: white;
+	text-align: center;
+	height: auto;
+}
+
+#menu {
+	display: inline-block;
+	margin-top: 20px;
+	vertical-align: bottom;
+}
+
+#menu a {
+	color: white;
+	margin: 50px;
+}
+
+#patterns_list {
+	display: none;
+/* 	display: block; */
+	text-align: left;
+	clear: both;
+	width: 400px;
+	position: absolute;
+	left: 50%;
+	z-index: 100;
+	background-color: #C34500;
+	padding: 10px;
+}
+
+#patterns_list li {
+	list-style: none;
+}
+
+#site_title {
+	display: block;
+	vertical-align: middle;
+	font-size: 36pt;
+}
+
+#site_title a {
+	text-decoration: none;
+	color: white;
+}
+
+#page_title {
+	text-align: center;
+	padding: 0;
+	margin-top: -20px;
+	padding-top: -20px;
+	position: relative;
+}
+
+#content {
+	width: 70%;
+	padding-top: 5%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content ul, ol {
+	padding-left: 50px;
+}
+
+#content li {
+	padding-top: 10px;
+}
+
+#content a, #navigation a {
+	color: #074A8D;
+}
+
+.main_section {
+	padding-bottom: 30px;
+}
+
+.sub_section {
+	padding-top: 20px;
+	padding-left: 50px;
+}
+
+.citation_link {
+	text-decoration: none;
+}
+
+.citation {
+	font-size: small;
+}
+
+.pattern_separator {
+	color: white;
+	border: none;
+	border-top: 2px white solid;
+	margin: 10px;
+}
+
+.citation_separator {
+	color: black;
+	border: none;
+	border-top: 1px black solid;
+}
