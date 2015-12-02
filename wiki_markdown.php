@@ -31,7 +31,7 @@ $page_title = $parent_page_title;
 	
 	function __removeExtras($content) {
 		
-		$content = str_replace('~~REFNOTES~~', '', $content);
+		$content = preg_replace('/~~.+?~~/', '', $content);
 		$content = preg_replace('/<html\b[^>]*>(.*?)<\/html>/i', '', $content);
 		return $content;
 	}
@@ -230,7 +230,7 @@ $page_title = $parent_page_title;
 				$pass = 0;
 			}
 			
-			// set image size; default = 800w X autoh
+			// set image size; default = 800W X autoH
 			if (isset($image_details[3]) && !empty($image_details[3])) {
 				$image_tag .= " style='width: ".$image_details[3]."px; height: auto;'";
 			} else if (isset($image_details[4]) && !empty($image_details[4])) {

@@ -44,6 +44,11 @@ html, body {
 	background-color: #093d73;
 }
 
+.modal img {
+	width: 100% !important;
+	height: auto !important;
+}
+
 #content {
 	margin-top: 40px;
 }

@@ -63,7 +63,7 @@
 		<link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" media="screen" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css">
 		<link rel="stylesheet" href="style.css">
-		<title>IFT | Bootstrap | <?php echo $title; ?></title>
+		<title>IFT | <?php echo $title; ?></title>
 	</head>
 	<body>
 		
