@@ -13,6 +13,66 @@
 	//check if page given
 	if (isset($_GET["id"])) {
 		$page_id = htmlspecialchars($_GET["id"]);
+	} else {
+		$page_id = "home";
+		$title = "Home";
+		$contents = "
+					====== Information Foraging Theory ======
+					[{{:poster.png|}}]
+					";
+	}
+	
+	if ($page_id == "about") {
+		$title = "About";
+		$contents = "
+					====== About ======
+					
+					===== Where did this wiki come from? =====
+					A lot of research and some secret sauce.
+					
+					===== Our Team =====
+					A grad student, a professor and two undergraduate researchers walk into a bar&hellip;oh, wrong story.
+					
+					<div class='row'>
+						<div class='col-md-3'>
+							<div class='thumbnail'>
+								<img src='http://i1.rgstatic.net/ii/profile.image/AS%3A279830521237508%401443728203476_l' alt='Tahmid Nabi'>
+								<div class='caption'>
+									<h3>Tahmid Nabi</h3>
+									<p>The Grad Student</p>
+								</div>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='thumbnail'>
+								<img src='http://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/facultystaff/scaffidi_0.jpg' alt='Christopher Scaffidi'>
+								<div class='caption'>
+									<h3>Christopher Scaffidi</h3>
+									<p>The Professor</p>
+								</div>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='thumbnail'>
+								<img src='http://bloximages.chicago2.vip.townnews.com/gazettetimes.com/content/tncms/assets/v3/editorial/e/78/e786d090-02fe-11e2-9a31-001a4bcf887a/505ad69d00331.preview-699.jpg' alt='Kyle Sweeney'>
+								<div class='caption'>
+									<h3>Kyle Sweeney</h3>
+									<p>Undergraduate #1</p>
+								</div>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='thumbnail'>
+								<img src='https://pbs.twimg.com/profile_images/624103240850771968/AZuE-N9R_400x400.jpg' alt='Sam Lichlyter'>
+								<div class='caption'>
+									<h3>Sam Lichlyter</h3>
+									<p>Undergraduate #2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+							
+					";
 	}
 	
 	// Check if directory is given, set data directory to given directory
@@ -127,7 +187,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo $parent_page_title; ?>?id=cue_decoration">Information Foraging Theory</a>
+					<a class="navbar-brand" href="<?php echo $parent_page_title; ?>">Information Foraging Theory</a>
 				</div>
 		
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -150,6 +210,12 @@
 			<?php if (isset($contents)) echo wiki_markdown($contents); ?>
 		</div>
 		<!-- END CONTENT -->
+		
+		<div id="footer" class="container">
+			<hr>
+			<p>Except where otherwise noted, content on this wiki is licensed under the following license: <a href="http://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a></p>
+			<p>This material is based in part upon work supported by the National Science Foundation under Grant CCF-1302113. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+		</div>
 	
 		<!-- JAVASCRIPT -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -167,8 +233,7 @@
 				}
 			});
 			
-			//TODO: JASNY BOOTSTRAP OFF CANVAS MANIPULATION
-			
+			//TODO: JASNY BOOTSTRAP OFF CANVAS MANIPULATION --> DOWN AND OVER ~80%
 			
 			
 			// BASIC PAGE SETUP
