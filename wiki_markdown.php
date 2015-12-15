@@ -9,8 +9,22 @@
 # <http://oregonstate.edu/>
 #
 
-# GLOBALS:
-$page_title = $parent_page_title;
+	# GLOBALS:
+	$page_title = 'readonly.php';
+	
+	// Check if run via command line, check file else use first argument
+	if (isset($argv) && !empty($argv[1])) {
+		if (is_file($argv[1])) {
+			$content = file_get_contents($argv[1]);
+		} else {
+			$content = $argv[1];
+		}
+		
+		echo wiki_markdown($content);
+	}
+	
+	
+	# FUNCTION DEFINITIONS:
 	
 	function wiki_markdown($content) {
 		$content = __removeExtras($content);
@@ -210,6 +224,10 @@ $page_title = $parent_page_title;
 		// loop through and replace images
 		for ($x = 0; $x < count($images); $x++) {
 			
+			// check if false positive
+			if (empty($images[$x]))
+				return $content;
+			
 			// flag to check if image found
 			$pass = 1;
 			
@@ -235,7 +253,9 @@ $page_title = $parent_page_title;
 				$image_tag .= " style='width: ".$image_details[3]."px; height: auto;'";
 			} else if (isset($image_details[4]) && !empty($image_details[4])) {
 				$image_tag .= " style='height: ".$image_details[4]."px; width: auto;'";
-			} 
+			} else {
+				$image_tag .= " style='width: 100%; height: auto;'";
+			}
 			
 			// set alt text
 			if (isset($images[2][$x]) && !empty($images[2][$x])) {
