@@ -154,25 +154,124 @@
 		<nav id="patternsMenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas">
 			<p class="navmenu-brand">Patterns:</p>
 			<ul class="nav navmenu-nav">
-<!--
-				LIST PATTERNS HERE:
 				
-				<li><a href="<?php echo $parent_page_title; ?>?id=cue_decoration">Cue Decoration</a></li>
-				<li><a href="<?php echo $parent_page_title; ?>?id=bookmark">Bookmark</a></li>
-				<li><a href="<?php echo $parent_page_title; ?>?id=shopping_cart">Shopping Cart</a></li>
--->
-
-				<!-- TEMPORARY LIST OF PATTERNS: -->
-				<?php
-					for ($index = 1; $index < count($link_array); $index++) {
-						if ($name_array[$index] != "Start" && !empty($name_array[$index]) && $name_array[index] != "Patterns List") {
-							echo "<li><a href='$parent_page_title?id=".$link_array[$index]."'>".$name_array[$index]."</a></li>\n";
-							if ($index % 5 == 0) {
-								echo "<hr class='pattern_separator'>";
-							}
-						}
-					}
-				?>
+				<!-- LIST PATTERNS HERE: -->
+				<li class="group_name">1. Increase the future value of information:</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=community_portal">Community Portal</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=signpost">Signpost</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">2. Decrease the future cost of processing information:</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=gather_together">Gather Together</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">3. Decrease future cost of navigation</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=bookmark">Bookmark</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=community_portal">Community Portal</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=dashboard">Dashboard</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=gather_together">Gather Together</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=notifier">Notifier</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=past_aggregate_behavior">Past Aggregate Behavior</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=personal_working_set">Personal Working Set</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=shopping_cart">Shopping Cart</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">4. Estimate value of information</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=cue_decoration">Cue Decoration</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=expertise_recommender">Expertise Recommender</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=feature_tracing">Feature Tracing</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=lexical_similarity">Lexical Similarity</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=notifier">Notifier</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=regression_fault_localization">Regression Fault Localization</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=signpost">Signpost</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=specification_matcher">Specification Matcher</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=structural_relatedness">Structural Relatedness</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=task_heuristic">Task Heuristic</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=patch_profitability">Patch Profitability</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=software_visualization">Software Visualization</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=online_feedback_miner">Online Feedback Miner</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">5. Estimate cost information</li>
+				<hr>
+				<li class="group_name">6. Decrease current cost of navigation</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=expertise_recommender">Expertise Recommender</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=lexical_similarity">Lexical Similarity</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=specification_matcher">Specification Matcher</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=structural_relatedness">Structural Relatedness</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=task_heuristic">Task Heuristic</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=software_visualization">Software Visualization</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=patch_prevalence">Patch Prevalence</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=online_feedback_miner">Online Feedback Miner</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=path_search">Path Search</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">7. Decrease cost of processing information</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=feature_tracing">Feature Tracing</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=filtering">Filtering</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=regression_fault_localization">Regression Fault Localization</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=reduce_duplicate_information">Reduce Duplicate Information</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=path_search">Path Search</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">8. Increase current value of information</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">9. Locate interesting information</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=dashboard">Dashboard</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=expertise_recommender">Expertise Recommender</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=lexical_similarity">Lexical Similarity</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=notifier">Notifier</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=past_aggregate_behavior">Past Aggregate Behavior</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=specification_matcher">Specification Matcher</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=structural_relatedness">Structural Relatedness</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=task_heuristic">Task Heuristic</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=online_feedback_miner">Online Feedback Miner</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=path_search">Path Search</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">10. Draw developer's attention to certain information</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=cue_decoration">Cue Decoration</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=signpost">Signpost</a></li>
+				</ul>
+				<hr>
+				<li class="group_name">11. Miscellaneous</li>
+				<ul>
+					<li><a href="<?php echo $parent_page_title; ?>?id=semantic_clustering">Semantic Clustering</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=strings_extraction">Strings Extraction</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=fault_localization">Fault Localization</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=recollection">Recollection</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=test_coverage">Test Coverage</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=visualize_topology">Visualize Topology</a></li>
+					<li><a href="<?php echo $parent_page_title; ?>?id=refactoring">Refactoring</a></li>
+				</ul>
+				<!-- END OF PATTERNS LIST -->
 			</ul>
 		</nav>
 		<!-- END PATTERNS MENU -->
@@ -211,11 +310,13 @@
 		</div>
 		<!-- END CONTENT -->
 		
+		<!-- FOOTER -->
 		<div id="footer" class="container">
 			<hr>
 			<p>Except where otherwise noted, content on this wiki is licensed under the following license: <a href="http://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a></p>
 			<p>This material is based in part upon work supported by the National Science Foundation under Grant CCF-1302113. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
 		</div>
+		<!-- END FOOTER -->
 	
 		<!-- JAVASCRIPT -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
