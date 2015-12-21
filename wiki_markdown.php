@@ -232,22 +232,13 @@
 			$pass = 1;
 			
 			// start image tag
-// 			$image_tag = "<img src='data/media/";
-			$image_tag = "<img src='img/";
+			$image_tag = "<img src='data/media/";
 			
 			// get image details --> [1] = directory name; [2] = filename; [3] = width; [4] = height;
 			if (!preg_match('/(.*):(.*)[\?|\|]([[:digit:]]*)\*?([[:digit:]]*)/', $images[1][$x], $image_details))
 				preg_match('/:(.*)/', $images[1][$x], $image_details);
 			
 			// set image path
-			if (isset($image_details[1]) && isset($image_details[2])) {
-				$image_tag .= $image_details[2]."'";
-			} else if (isset($image_details[1])) {
-				$image_tag .= $image_details[1]."'";
-			} else {
-				$pass = 0;
-			}
-/*
 			if (isset($image_details[1]) && isset($image_details[2])) {
 				$image_tag .= $image_details[1]."/".$image_details[2]."'";
 			} else if (isset($image_details[1])) {
@@ -256,7 +247,6 @@
 				//image not found; set flag to null
 				$pass = 0;
 			}
-*/
 			
 			// set image size; default = 800W X autoH
 			if (isset($image_details[3]) && !empty($image_details[3])) {
