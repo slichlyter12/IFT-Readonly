@@ -71,6 +71,16 @@ html, body {
 /* 	text-align: center; */
 }
 
+iframe {
+	height: 1000px;
+	width: 100%;
+	border: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 @media print {
 	#primer_modal, #patternsMenu, .navbar {

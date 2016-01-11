@@ -30,8 +30,8 @@
 		$content = __removeExtras($content);
 		$content = __convertHeaders($content);
 		$content = __convertParagraphs($content);
-		$content = __convertImages($content);
 		$content = __convertLists($content);
+		$content = __convertImages($content);
 		$content = __convertLinks($content);
 		$content = __convertCitations($content);
 		$content = __convertBold($content);
@@ -232,7 +232,7 @@
 			$pass = 1;
 			
 			// start image tag
-			$image_tag = "<img src='data/media/";
+			$image_tag = "<img src='img/";
 			
 			// get image details --> [1] = directory name; [2] = filename; [3] = width; [4] = height;
 			if (!preg_match('/(.*):(.*)[\?|\|]([[:digit:]]*)\*?([[:digit:]]*)/', $images[1][$x], $image_details))
@@ -240,7 +240,7 @@
 			
 			// set image path
 			if (isset($image_details[1]) && isset($image_details[2])) {
-				$image_tag .= $image_details[1]."/".$image_details[2]."'";
+				$image_tag .= $image_details[2]."'";
 			} else if (isset($image_details[1])) {
 				$image_tag .= $image_details[1]."'";
 			} else {

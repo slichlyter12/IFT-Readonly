@@ -16,63 +16,12 @@
 	} else {
 		$page_id = "home";
 		$title = "Home";
-		$contents = "
-					====== Information Foraging Theory ======
-					[{{:poster.png|}}]
-					";
+		$contents = "<iframe src='home.php'></iframe>";
 	}
 	
 	if ($page_id == "about") {
 		$title = "About";
-		$contents = "
-					====== About ======
-					
-					===== Where did this wiki come from? =====
-					A lot of research and some secret sauce.
-					
-					===== Our Team =====
-					A grad student, a professor and two undergraduate researchers walk into a bar&hellip;oh, wrong story.
-					
-					<div class='row'>
-						<div class='col-md-3'>
-							<div class='thumbnail'>
-								<img src='http://i1.rgstatic.net/ii/profile.image/AS%3A279830521237508%401443728203476_l' alt='Tahmid Nabi'>
-								<div class='caption'>
-									<h3>Tahmid Nabi</h3>
-									<p>The Grad Student</p>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-3'>
-							<div class='thumbnail'>
-								<img src='http://eecs.oregonstate.edu/sites/eecs.oregonstate.edu/files/facultystaff/scaffidi_0.jpg' alt='Christopher Scaffidi'>
-								<div class='caption'>
-									<h3>Christopher Scaffidi</h3>
-									<p>The Professor</p>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-3'>
-							<div class='thumbnail'>
-								<img src='http://bloximages.chicago2.vip.townnews.com/gazettetimes.com/content/tncms/assets/v3/editorial/e/78/e786d090-02fe-11e2-9a31-001a4bcf887a/505ad69d00331.preview-699.jpg' alt='Kyle Sweeney'>
-								<div class='caption'>
-									<h3>Kyle Sweeney</h3>
-									<p>Undergraduate #1</p>
-								</div>
-							</div>
-						</div>
-						<div class='col-md-3'>
-							<div class='thumbnail'>
-								<img src='https://pbs.twimg.com/profile_images/624103240850771968/AZuE-N9R_400x400.jpg' alt='Sam Lichlyter'>
-								<div class='caption'>
-									<h3>Sam Lichlyter</h3>
-									<p>Undergraduate #2</p>
-								</div>
-							</div>
-						</div>
-					</div>
-							
-					";
+		$contents = file_get_contents("profiles/bio.txt");
 	}
 	
 	// Check if directory is given, set data directory to given directory
