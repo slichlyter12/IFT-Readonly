@@ -1,0 +1,64 @@
+====== About ======
+					
+===== Where did this wiki come from? =====
+A lot of research and some secret sauce.
+
+===== Our Team =====
+A grad student, a professor and two undergraduate researchers walk into a bar&hellip;oh, wrong story.
+
+<div class='row'>
+	<div class='col-md-3'>
+		<div class='thumbnail'>
+			<img src='img/nabi.jpg' alt='Tahmid Nabi'>
+			<div class='caption'>
+				<h3>Tahmid Nabi</h3>
+				<p>The Grad Student</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-3'>
+		<div class='thumbnail'>
+			<img src='img/scaffidi.jpg' alt='Christopher Scaffidi'>
+			<div class='caption'>
+				<h3>Christopher Scaffidi</h3>
+				<p>The Professor</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-3'>
+		<div class='thumbnail'>
+			<img src='http://bloximages.chicago2.vip.townnews.com/gazettetimes.com/content/tncms/assets/v3/editorial/e/78/e786d090-02fe-11e2-9a31-001a4bcf887a/505ad69d00331.preview-699.jpg' alt='Kyle Sweeney'>
+			<div class='caption'>
+				<h3>Kyle Sweeney</h3>
+				<p>Undergraduate #1</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-3'>
+		<div class='thumbnail'>
+			<img src='img/lichlyter.jpg' alt='Sam Lichlyter'>
+			<div class='caption'>
+				<h3>Sam Lichlyter</h3>
+				<p>Born and raised in Medford, Oregon &mdash; writing computer programs and websites since before he was ten. Sam has worked on projects both big and small from his parents' business website to education web applications for the University of Washington. Sam is a Computer Science Undergraduate (and a Psychology Minor) with a passion in web and iOS development.</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-3'>
+		<div class='thumbnail'>
+			<img src='img/burnett.jpg' alt='Margaret Burnett'>
+			<div class='caption'>
+				<h3>Margaret Burnett</h3>
+				<p>Lorem Ipsum.</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-3'>
+		<div class='thumbnail'>
+			<img src='http://blogs.oregonstate.edu/eecsnews/files/2015/04/piorkowski-edit.jpg' alt='David Piorkowski'>
+			<div class='caption'>
+				<h3>David Piorkowski</h3>
+				<p>Lorem Ipsum.</p>
+			</div>
+		</div>
+	</div>
+</div>
