@@ -16,7 +16,9 @@
 	} else {
 		$page_id = "home";
 		$title = "Home";
-		$contents = "<iframe src='home.php'></iframe>";
+// 		$contents = "<iframe src='home.php'></iframe>";
+		$contents = "{{:poster.png|}}";
+// 		$contents = file_get_contents('home.php');
 	}
 	
 	if ($page_id == "about") {
