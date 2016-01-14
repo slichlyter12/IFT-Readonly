@@ -17,8 +17,8 @@
 		$page_id = "home";
 		$title = "Home";
 // 		$contents = "<iframe src='home.php'></iframe>";
-		$contents = "{{:poster.png|}}";
-// 		$contents = file_get_contents('home.php');
+// 		$contents = "{{:poster.png|}}"; 
+		$contents = file_get_contents('home.txt');
 	}
 	
 	if ($page_id == "about") {
@@ -74,6 +74,7 @@
 		<link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" media="screen" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css">
 		<link rel="stylesheet" href="style.css">
+		<?php if ($page_id == "home") echo "<link rel='stylesheet' href='home.css'>"; ?>
 		<title>IFT | <?php echo $title; ?></title>
 	</head>
 	<body>
