@@ -20,7 +20,7 @@
 <div class="round-rect align">
 	<p><b>Example:</b> Suppose you're an IDE designer interested in helping developers find information related to a project's status... e.g., keeping abreast of feature requests, bug counts, etc.</p>
 	<p><b>Your Problem:</b> What should your tool look like? What should it do?</p>
-	<p><b>Solution:</b> Go to the IFT wiki for ideas. In particular, you'll find the Dashboard design patter...</p>
+	<p><b>Solution:</b> Go to the IFT wiki for ideas. In particular, you'll find the Dashboard design pattern&hellip;</p>
 	<p><b>Aha!</b> Your tool could include a Dashboard!</p>
 	<p>So then you create and evaluate your tool, publish your research, and change the world.</p>
 </div></div>
