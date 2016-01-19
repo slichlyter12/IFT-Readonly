@@ -36,6 +36,10 @@ html, body {
 	text-align: left;
 }
 
+.question {
+	font-size: 15pt;
+}
+
 .left {
 	float: left;
 }

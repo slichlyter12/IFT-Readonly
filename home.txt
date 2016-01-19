@@ -12,8 +12,8 @@
 	</div>
 	<div class="clear"></div>
 </div>
-<p class="align"><b>Objective:</b> Map Information Foraging Theory (IFT) to design patterns for development tools</p>
-<p class="align"><b>Why?</b> To help tool designers get ideas for how to help developers find information</p>
+<p class="centered question"><b>Objective:</b> Map Information Foraging Theory (IFT) to design patterns for development tools</p>
+<p class="centered question"><b>Why?</b> To help tool designers get ideas for how to help developers find information</p>
 <div class="left-rects"><div class="focus-rect align" id="orange">
 	<h2>Theory &rarr; Design Patterns &rarr; Tools</h2>
 </div>
