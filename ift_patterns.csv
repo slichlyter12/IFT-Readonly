@@ -1,0 +1,81 @@
+1. Increase the future value of information,Community Portal
+,Signpost
+,Documentation Processing
+,Rename Refactoring
+,Extract Method Refactoring
+2. Decrease the future cost of processing information,Gather Together
+,Documentation Processing
+,Rename Refactoring
+,Extract Method Refactoring
+3. Decrease future cost of navigation,Bookmark
+,Community Portal
+,Dashboard
+,Gather Together
+,Notifier
+,Past Aggregate Behavior
+,Personal Working Set
+,Shopping Cart
+4. Estimate value of information,Information Feature Decorator
+,Cue Decoration
+,Expertise Recommender
+,Feature Tracing
+,Lexical Similarity
+,Notifier
+,Regression Fault Localization
+,Signpost
+,Specification Matcher
+,Structural Relatedness
+,Task Heuristic
+,Patch Protifability
+,Impact Location
+,Documentation Processing
+,Software Visualization
+,Heuristics-based code completion
+,Online Feedback Miner
+,Test Coverage
+,Visualize Topology
+,Recollection
+5. Estimate cost of information,Visualize Topology
+6. Decrease current cost of navigation,Expertise Recommender
+,Lexical Similarity
+,Specification Matcher
+,Structural Relatedness
+,Task Heuristic
+,Impact Location
+,Software Visualization
+,Patch Prevalence
+,Heuristics-based code completion
+,Online Feedback Miner
+,Path Search
+,Recollection
+7. Decrease current cost of processing information,Information Feature Decorator
+,Feature Tracing
+,Filtering
+,Regression Fault Localization
+,Impact Location
+,Documentation Processing
+,Reduce Duplication Information
+,Heuristics-based code completion
+,Path Search
+,Extract Method Refactoring
+,Rename Refactoring
+,Recollection
+8. Increase current value of information,Information Feature Decorator
+,Documentation Processing
+,Visualize Topology
+9. Locate interesting information,Dashboard
+,Expertise Recommender
+,Lexical Similarity
+,Notifier
+,Past Aggregate Behavior
+,Specification Matcher
+,Structural Relatedness
+,Task Heuristic
+,Impact Location
+,Heuristics-based code completion
+,Online Feedback Miner
+,Path Search
+10. Draw developer's attention to to certain information,Information Feature Decorator
+,Cue Decoration
+,Signpost
+,Test Coverage
