@@ -56,7 +56,7 @@ The finalized design pattern catalog from this community collection process is p
 			<img src='img/burnett.jpg' alt='Margaret Burnett'>
 			<div class='caption'>
 				<h3>Margaret Burnett</h3>
-				<p>Kale chips lomo master cleanse, intelligentsia literally letterpress kombucha crucifix vegan sustainable. Pour-over kombucha venmo biodiesel, selfies ramps tousled hammock gochujang. Keffiyeh poutine kombucha whatever swag, neutra seitan fingerstache. Polaroid locavore YOLO williamsburg shabby chic pinterest. Blue bottle pork belly helvetica tilde, cold-pressed XOXO craft beer tote bag chartreuse austin paleo. Occupy selfies hella, chartreuse asymmetrical shabby chic master cleanse humblebrag fashion axe freegan chambray neutra. Leggings tousled kombucha cronut tilde.</p>
+				<p>Margaret Burnett is currently a professor of Computer Science in the School of EECS at Oregon State University. Her research interests are where programming languages, human-computer interaction, and software engineering meet: namely, in visual programming languages and in how programming language and software engineering research can be applied to support end-user programming. She has a long history of research in these issues and others relating to human issues of programming.</p>
 			</div>
 		</div>
 	</div>
@@ -65,7 +65,7 @@ The finalized design pattern catalog from this community collection process is p
 			<img src='img/piorkowski.jpg' alt='David Piorkowski'>
 			<div class='caption'>
 				<h3>David Piorkowski</h3>
-				<p>Sustainable swag meggings, PBR&B gastropub quinoa fashion axe trust fund small batch squid art party letterpress health goth offal. Chartreuse ethical semiotics chia. Cred 3 wolf moon scenester swag leggings. DIY semiotics ramps roof party. Artisan brunch literally scenester selfies, wayfarers tote bag fingerstache cronut distillery quinoa gentrify meh flannel raw denim. Fanny pack chia tote bag tacos. Humblebrag DIY drinking vinegar banh mi typewriter four dollar toast pork belly pickled, messenger bag cray yuccie fap fanny pack quinoa thundercats.</p>
+				<p>David Piorkowski is a Ph.D. student at Oregon State University researching software engineering. David aims to create better tools for software developers to help them debug their code.</p>
 			</div>
 		</div>
 	</div>
