@@ -51,6 +51,8 @@ html, body {
 
 #content {
 	margin-top: 40px;
+	width: 70%;
+	float: left;
 }
 
 #content #page_title {
@@ -70,6 +72,8 @@ html, body {
 #footer {
 	font-size: 8pt;
 	text-align: center;
+	width: 70%;
+	float: left;
 }
 
 .nav .group_name {
@@ -91,6 +95,28 @@ iframe {
 
 .grid {
 	width: 460px;
+}
+
+button.btn.btn-default.navbar-btn {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	button.btn.btn-default.navbar-btn {
+		display: block;
+	}
+	
+	#content {
+		width: 100%;
+	}
+	
+	#footer {
+		width: 100%;
+	}
+	
+	#patternsMenu {
+		display: none;
+	}
 }
 
 @media print {

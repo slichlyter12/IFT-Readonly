@@ -127,7 +127,7 @@
 		<!-- END MODAL -->
 		
 		<!-- PATTERNS MENU -->
-		<nav id="patternsMenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas">
+		<nav id="patternsMenu" class="navmenu navmenu-default navmenu-fixed-right">
 			<p class="navmenu-brand">Patterns:</p>
 			<ul class="nav navmenu-nav">
 				
@@ -227,6 +227,8 @@
 			    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 				if (width <= 320) {
 					$(".navbar-brand").text("IFT");
+					$("nav#patternsMenu").addClass("off-canvas");
+					$("button.btn.btn-default.navbar-btn").show();
 				}
 				
 				// CATEGORIES LIST UNDER EACH PATTERN
