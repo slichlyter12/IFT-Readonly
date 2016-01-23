@@ -1,84 +1,84 @@
-1. Increase the future value of information,Community Portal
-1. Increase the future value of information,Signpost
-1. Increase the future value of information,Documentation Processing
-1. Increase the future value of information,Rename Refactoring
-1. Increase the future value of information,Extract Method Refactoring
-2. Decrease the future cost of processing information,Gather Together
-2. Decrease the future cost of processing information,Documentation Processing
-2. Decrease the future cost of processing information,Rename Refactoring
-2. Decrease the future cost of processing information,Extract Method Refactoring
-3. Decrease future cost of navigation,Bookmark
-3. Decrease future cost of navigation,Community Portal
-3. Decrease future cost of navigation,Dashboard
-3. Decrease future cost of navigation,Gather Together
-3. Decrease future cost of navigation,Notifier
-3. Decrease future cost of navigation,Past Aggregate Behavior
-3. Decrease future cost of navigation,Personal Working Set
-3. Decrease future cost of navigation,Shopping Cart
-4. Estimate value of information,Information Feature Decorator
-4. Estimate value of information,Cue Decoration
-4. Estimate value of information,Expertise Recommender
-4. Estimate value of information,Feature Tracing
-4. Estimate value of information,Lexical Similarity
-4. Estimate value of information,Notifier
-4. Estimate value of information,Regression Fault Localization
-4. Estimate value of information,Signpost
-4. Estimate value of information,Specification Matcher
-4. Estimate value of information,Structural Relatedness
-4. Estimate value of information,Task Heuristic
-4. Estimate value of information,Patch Protifability
-4. Estimate value of information,Impact Location
-4. Estimate value of information,Documentation Processing
-4. Estimate value of information,Software Visualization
-4. Estimate value of information,Heuristics-based code completion
-4. Estimate value of information,Online Feedback Miner
-4. Estimate value of information,Test Coverage
-4. Estimate value of information,Visualize Topology
-4. Estimate value of information,Recollection
-5. Estimate cost of information,Visualize Topology
-6. Decrease current cost of navigation,Expertise Recommender
-6. Decrease current cost of navigation,Lexical Similarity
-6. Decrease current cost of navigation,Specification Matcher
-6. Decrease current cost of navigation,Structural Relatedness
-6. Decrease current cost of navigation,Task Heuristic
-6. Decrease current cost of navigation,Impact Location
-6. Decrease current cost of navigation,Software Visualization
-6. Decrease current cost of navigation,Patch Prevalence
-6. Decrease current cost of navigation,Heuristics-based code completion
-6. Decrease current cost of navigation,Online Feedback Miner
-6. Decrease current cost of navigation,Path Search
-6. Decrease current cost of navigation,Recollection
-7. Decrease current cost of processing information,Information Feature Decorator
-7. Decrease current cost of processing information,Feature Tracing
-7. Decrease current cost of processing information,Filtering
-7. Decrease current cost of processing information,Regression Fault Localization
-7. Decrease current cost of processing information,Impact Location
-7. Decrease current cost of processing information,Documentation Processing
-7. Decrease current cost of processing information,Reduce Duplication Information
-7. Decrease current cost of processing information,Heuristics-based code completion
-7. Decrease current cost of processing information,Path Search
-7. Decrease current cost of processing information,Extract Method Refactoring
-7. Decrease current cost of processing information,Rename Refactoring
-7. Decrease current cost of processing information,Recollection
-8. Increase current value of information,Information Feature Decorator
-8. Increase current value of information,Documentation Processing
-8. Increase current value of information,Visualize Topology
-9. Locate interesting information,Dashboard
-9. Locate interesting information,Expertise Recommender
-9. Locate interesting information,Lexical Similarity
-9. Locate interesting information,Notifier
-9. Locate interesting information,Past Aggregate Behavior
-9. Locate interesting information,Specification Matcher
-9. Locate interesting information,Structural Relatedness
-9. Locate interesting information,Task Heuristic
-9. Locate interesting information,Impact Location
-9. Locate interesting information,Heuristics-based code completion
-9. Locate interesting information,Online Feedback Miner
-9. Locate interesting information,Path Search
-10. Draw developer's attention to to certain information,Information Feature Decorator
-10. Draw developer's attention to to certain information,Cue Decoration
-10. Draw developer's attention to to certain information,Signpost
-10. Draw developer's attention to to certain information,Test Coverage
-11. Miscellaneous,Semantic Clustering
-11. Miscellaneous,Strings Extraction
-11. Miscellaneous,Fault Localization
+1. Increase the future value of information,Community Portal,
+1. Increase the future value of information,Signpost,
+1. Increase the future value of information,Documentation Processing,
+1. Increase the future value of information,Rename Refactoring,
+1. Increase the future value of information,Extract Method Refactoring,
+2. Decrease the future cost of processing information,Gather Together,
+2. Decrease the future cost of processing information,Documentation Processing,
+2. Decrease the future cost of processing information,Rename Refactoring,
+2. Decrease the future cost of processing information,Extract Method Refactoring,
+3. Decrease future cost of navigation,Bookmark,
+3. Decrease future cost of navigation,Community Portal,
+3. Decrease future cost of navigation,Dashboard,
+3. Decrease future cost of navigation,Gather Together,
+3. Decrease future cost of navigation,Notifier,
+3. Decrease future cost of navigation,Past Aggregate Behavior,
+3. Decrease future cost of navigation,Personal Working Set,
+3. Decrease future cost of navigation,Shopping Cart,
+4. Estimate value of information,Information Feature Decorator Pattern,
+4. Estimate value of information,Cue Decoration,
+4. Estimate value of information,Expertise Recommender,
+4. Estimate value of information,Feature Tracing,
+4. Estimate value of information,Lexical Similarity,
+4. Estimate value of information,Notifier,
+4. Estimate value of information,Regression Fault Localization,
+4. Estimate value of information,Signpost,
+4. Estimate value of information,Specification Matcher,
+4. Estimate value of information,Structural Relatedness,
+4. Estimate value of information,Task Heuristic,
+4. Estimate value of information,Patch Profitability,
+4. Estimate value of information,Impact Location,
+4. Estimate value of information,Documentation Processing,
+4. Estimate value of information,Software Visualization,
+4. Estimate value of information,Heuristics-based code completion,
+4. Estimate value of information,Online Feedback Miner,
+4. Estimate value of information,Test Coverage,
+4. Estimate value of information,Visualize Topology,
+4. Estimate value of information,Recollection,
+5. Estimate cost of information,Visualize Topology,
+6. Decrease current cost of navigation,Expertise Recommender,
+6. Decrease current cost of navigation,Lexical Similarity,
+6. Decrease current cost of navigation,Specification Matcher,
+6. Decrease current cost of navigation,Structural Relatedness,
+6. Decrease current cost of navigation,Task Heuristic,
+6. Decrease current cost of navigation,Impact Location,
+6. Decrease current cost of navigation,Software Visualization,
+6. Decrease current cost of navigation,Patch Prevalence,
+6. Decrease current cost of navigation,Heuristics-based code completion,
+6. Decrease current cost of navigation,Online Feedback Miner,
+6. Decrease current cost of navigation,Path Search,
+6. Decrease current cost of navigation,Recollection,
+7. Decrease current cost of processing information,Information Feature Decorator Pattern, 
+7. Decrease current cost of processing information,Feature Tracing,
+7. Decrease current cost of processing information,Filtering,
+7. Decrease current cost of processing information,Regression Fault Localization,
+7. Decrease current cost of processing information,Impact Location,
+7. Decrease current cost of processing information,Documentation Processing,
+7. Decrease current cost of processing information,Reduce Duplicate Information,
+7. Decrease current cost of processing information,Heuristics-based code completion,
+7. Decrease current cost of processing information,Path Search,
+7. Decrease current cost of processing information,Extract Method Refactoring,
+7. Decrease current cost of processing information,Rename Refactoring,
+7. Decrease current cost of processing information,Recollection,
+8. Increase current value of information,Information Feature Decorator Pattern,
+8. Increase current value of information,Documentation Processing,
+8. Increase current value of information,Visualize Topology,
+9. Locate interesting information,Dashboard,
+9. Locate interesting information,Expertise Recommender,
+9. Locate interesting information,Lexical Similarity,
+9. Locate interesting information,Notifier,
+9. Locate interesting information,Past Aggregate Behavior,
+9. Locate interesting information,Specification Matcher,
+9. Locate interesting information,Structural Relatedness,
+9. Locate interesting information,Task Heuristic,
+9. Locate interesting information,Impact Location,
+9. Locate interesting information,Heuristics-based code completion,
+9. Locate interesting information,Online Feedback Miner,
+9. Locate interesting information,Path Search,
+10. Draw developer's attention to certain information,Information Feature Decorator Pattern,
+10. Draw developer's attention to certain information,Cue Decoration,
+10. Draw developer's attention to certain information,Signpost,
+10. Draw developer's attention to certain information,Test Coverage,
+11. Miscellaneous,Semantic Clustering,
+11. Miscellaneous,Strings Extraction,
+11. Miscellaneous,Fault Localization,

@@ -34,7 +34,7 @@
 	<div class="round-rect">
 		<p><b><u>Wiki status</u></b></p>
 		<p>32 different design patterns</p>
-		<p>9 different patter contributors, in addition to our own research group</p>
+		<p>9 different pattern contributors, in addition to our own research group</p>
 		<p>Distribution of pattern purposes</p>
 	</div>
 </div>

@@ -18,7 +18,7 @@ The finalized design pattern catalog from this community collection process is p
 			<img src='img/nabi.jpg' alt='Tahmid Nabi'>
 			<div class='caption'>
 				<h3>Tahmid Nabi</h3>
-				<p>Master cleanse viral sustainable cardigan, kombucha post-ironic meh knausgaard helvetica selvage craft beer thundercats affogato art party tattooed. Kale chips kogi paleo, cred slow-carb normcore direct trade small batch. Pour-over keffiyeh microdosing, migas pabst artisan chillwave next level. YOLO pickled single-origin coffee, godard tattooed iPhone tousled chambray gentrify. Cronut mixtape pour-over, tote bag hammock everyday carry health goth neutra chicharrones kinfolk forage. Green juice chia hashtag kogi, pinterest irony chambray plaid. Pabst seitan tacos leggings normcore.</p>
+				<p>Tahmid did his Bachelor's degree in Computer Science and Engineering from Bangladesh University of Engineering and Technology. He worked 2.5 years as a web developer and developed an interest in software maintenance, reusability and design patterns. This led to him to pursue Design Patterns-based Software Engineering Research here at Oregon State University.</p>
 			</div>
 		</div>
 	</div>

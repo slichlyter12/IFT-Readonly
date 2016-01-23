@@ -2,27 +2,7 @@
 	
 	$parent_page_title = "readonly.php";
 	include_once('wiki_markdown.php');
-	
-	function printPatterns() {
-		$category = "";
-		$counter = 0;
-		$patterns = file_get_contents('ift_patterns.json');
-		$decoded_patterns = json_decode($patterns);
-		foreach ($decoded_patterns as $pattern) {
-			if ($pattern->{'category'} != $category) {
-				$category = $pattern->{'category'};
-				if ($counter > 0) echo "</ul>\n<hr>\n";
-				echo "<li class='group_name'>".$pattern->{'category'}.":</li>\n";
-				echo "<ul>\n";
-				$counter++;
-			}
-			$pattern_name = $pattern->{'pattern'};
-			$pattern_link = str_replace(' ', '_', $pattern_name);
-			$pattern_link = strtolower($pattern_link);
-			echo "<li><a href='$parent_page_title?id=$pattern_link'>$pattern_name</a></li>\n";
-		}
-	}
-	
+		
 	// Initialize variables
 	$page_id = "";
 	$datadir = dirname(__FILE__)."/data/pages/";
@@ -41,13 +21,28 @@
 	
 	if ($page_id == "putting_ift_into_practice") {
 		$title = "Putting IFT into Practice";
-		$contents = "
+		$contents = file_get_contents('putting_ift_into_practice.txt');
 		
-		====== Putting IFT into Practice ======
+		$category = "";
+		$counter = 0;
 		
-		
-		
-		";
+		$patterns = file_get_contents('ift_patterns.json');
+		$decoded_patterns = json_decode($patterns);
+		foreach ($decoded_patterns as $pattern) {
+			if ($pattern->{'category'} != $category) {
+				$category = $pattern->{'category'};
+				if ($counter > 0) $contents .= "</div></div>"; // end category
+				if ($counter % 4 == 0 && $counter > 0) $contents .= "</div>"; //end row
+				if ($counter % 4 == 0) $contents .= "<div class='row'>"; //start row
+				$contents .= "<div class='col-xs-3'><div class='list-group'>";
+				$contents .= "<a href='#' class='list-group-item active non-link'>".$pattern->{'category'}.":</a>";
+				$counter++;
+			}
+			$pattern_name = $pattern->{'pattern'};
+			$pattern_link = str_replace(' ', '_', $pattern_name);
+			$pattern_link = strtolower($pattern_link);
+			$contents .= "<a href='$parent_page_title?id=$pattern_link' class='list-group-item'>$pattern_name</a>";
+		}
 	}
 	
 	if ($page_id == "about") {
@@ -138,7 +133,27 @@
 				
 				<!-- LIST PATTERNS HERE: -->
 				
-				<?php printPatterns(); ?>
+				<?php 
+					
+					$category = "";
+					$counter = 0;
+					$patterns = file_get_contents('ift_patterns.json');
+					$decoded_patterns = json_decode($patterns);
+					foreach ($decoded_patterns as $pattern) {
+						if ($pattern->{'category'} != $category) {
+							$category = $pattern->{'category'};
+							if ($counter > 0) echo "</ul>\n<hr>\n";
+							echo "<li class='group_name'>".$pattern->{'category'}.":</li>\n";
+							echo "<ul>\n";
+							$counter++;
+						}
+						$pattern_name = $pattern->{'pattern'};
+						$pattern_link = str_replace(' ', '_', $pattern_name);
+						$pattern_link = strtolower($pattern_link);
+						echo "<li><a href='$parent_page_title?id=$pattern_link'>$pattern_name</a></li>\n";
+					}
+					
+				?>
 				
 				<!-- END PATTERNS LIST -->
 			</ul>
@@ -194,6 +209,7 @@
 		<script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
 		<script src="bower_components/MathJax/MathJax.js"></script>
 		<script src="bower_components/MathJax/config/TeX-AMS-MML_HTMLorMML.js"></script>
+<!-- 		<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script> -->
 		<script>
 			
 			//MATHJAX CONFIG
@@ -202,10 +218,7 @@
 					inlineMath: [['$', '$'], ['\\(', '\\)']],
 					processEscapes: true
 				}
-			});
-			
-			//TODO: JASNY BOOTSTRAP OFF CANVAS MANIPULATION --> DOWN AND OVER ~80%
-			
+			});			
 			
 			// BASIC PAGE SETUP
 			$(document).ready(function() {
@@ -215,7 +228,23 @@
 				if (width <= 320) {
 					$(".navbar-brand").text("IFT");
 				}
-			});
+				
+				// CATEGORIES LIST UNDER EACH PATTERN
+				$.getJSON("ift_patterns.json", function(data) {
+					var categories = [];
+					$.each(data, function(key, val) {
+						if (val['pattern'] == "<?php echo $title; ?>") {
+							categories.push("<li><h6>" + val['category'].substring(3) + "</h6></li>");
+						}
+					});
+					
+					$("<ul>", {
+						"class": "categories-list",
+						html: categories.join("")
+					}).insertAfter($("#page_title:eq(1)"));
+				});
+				
+			});			
 			
 		</script>
 		<!-- END JAVASCRIPT -->
