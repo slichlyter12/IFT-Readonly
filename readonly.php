@@ -2,7 +2,7 @@
 	
 	$parent_page_title = "readonly.php";
 	include_once('wiki_markdown.php');
-	
+		
 	// Initialize variables
 	$page_id = "";
 	$datadir = dirname(__FILE__)."/data/pages/";
@@ -16,9 +16,33 @@
 	} else {
 		$page_id = "home";
 		$title = "Home";
-// 		$contents = "<iframe src='home.php'></iframe>";
-// 		$contents = "{{:poster.png|}}"; 
 		$contents = file_get_contents('home.txt');
+	}
+	
+	if ($page_id == "putting_ift_into_practice") {
+		$title = "Putting IFT into Practice";
+		$contents = file_get_contents('putting_ift_into_practice.txt');
+		
+		$category = "";
+		$counter = 0;
+		
+		$patterns = file_get_contents('ift_patterns.json');
+		$decoded_patterns = json_decode($patterns);
+		foreach ($decoded_patterns as $pattern) {
+			if ($pattern->{'category'} != $category) {
+				$category = $pattern->{'category'};
+				if ($counter > 0) $contents .= "</div></div>"; // end category
+				if ($counter % 4 == 0 && $counter > 0) $contents .= "</div>"; //end row
+				if ($counter % 4 == 0) $contents .= "<div class='row'>"; //start row
+				$contents .= "<div class='col-md-4'><div class='list-group'>";
+				$contents .= "<a href='#' class='list-group-item active non-link'>".$pattern->{'category'}.":</a>";
+				$counter++;
+			}
+			$pattern_name = $pattern->{'pattern'};
+			$pattern_link = str_replace(' ', '_', $pattern_name);
+			$pattern_link = strtolower($pattern_link);
+			$contents .= "<a href='$parent_page_title?id=$pattern_link' class='list-group-item'>$pattern_name</a>";
+		}
 	}
 	
 	if ($page_id == "about") {
@@ -103,127 +127,35 @@
 		<!-- END MODAL -->
 		
 		<!-- PATTERNS MENU -->
-		<nav id="patternsMenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas">
+		<nav id="patternsMenu" class="navmenu navmenu-default navmenu-fixed-right">
 			<p class="navmenu-brand">Patterns:</p>
 			<ul class="nav navmenu-nav">
 				
 				<!-- LIST PATTERNS HERE: -->
-				<li class="group_name">1. Increase the future value of information:</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=community_portal">Community Portal</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=signpost">Signpost</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">2. Decrease the future cost of processing information:</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=gather_together">Gather Together</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">3. Decrease future cost of navigation</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=bookmark">Bookmark</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=community_portal">Community Portal</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=dashboard">Dashboard</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=gather_together">Gather Together</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=notifier">Notifier</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=past_aggregate_behavior">Past Aggregate Behavior</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=personal_working_set">Personal Working Set</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=shopping_cart">Shopping Cart</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">4. Estimate value of information</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=cue_decoration">Cue Decoration</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=expertise_recommender">Expertise Recommender</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=feature_tracing">Feature Tracing</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=lexical_similarity">Lexical Similarity</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=notifier">Notifier</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=regression_fault_localization">Regression Fault Localization</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=signpost">Signpost</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=specification_matcher">Specification Matcher</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=structural_relatedness">Structural Relatedness</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=task_heuristic">Task Heuristic</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=patch_profitability">Patch Profitability</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=software_visualization">Software Visualization</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=online_feedback_miner">Online Feedback Miner</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">5. Estimate cost information</li>
-				<hr>
-				<li class="group_name">6. Decrease current cost of navigation</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=expertise_recommender">Expertise Recommender</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=lexical_similarity">Lexical Similarity</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=specification_matcher">Specification Matcher</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=structural_relatedness">Structural Relatedness</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=task_heuristic">Task Heuristic</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=software_visualization">Software Visualization</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=patch_prevalence">Patch Prevalence</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=online_feedback_miner">Online Feedback Miner</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=path_search">Path Search</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">7. Decrease cost of processing information</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=feature_tracing">Feature Tracing</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=filtering">Filtering</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=regression_fault_localization">Regression Fault Localization</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=reduce_duplicate_information">Reduce Duplicate Information</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=path_search">Path Search</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">8. Increase current value of information</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=documentation_processing">Documentation Processing</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">9. Locate interesting information</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=dashboard">Dashboard</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=expertise_recommender">Expertise Recommender</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=lexical_similarity">Lexical Similarity</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=notifier">Notifier</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=past_aggregate_behavior">Past Aggregate Behavior</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=specification_matcher">Specification Matcher</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=structural_relatedness">Structural Relatedness</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=task_heuristic">Task Heuristic</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=impact_location">Impact Location</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=heuristics-based_code_completion">Heuristics-based code completion</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=online_feedback_miner">Online Feedback Miner</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=path_search">Path Search</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">10. Draw developer's attention to certain information</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=information_feature_decorator_pattern">Information Feature Decorator</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=cue_decoration">Cue Decoration</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=signpost">Signpost</a></li>
-				</ul>
-				<hr>
-				<li class="group_name">11. Miscellaneous</li>
-				<ul>
-					<li><a href="<?php echo $parent_page_title; ?>?id=semantic_clustering">Semantic Clustering</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=strings_extraction">Strings Extraction</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=fault_localization">Fault Localization</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=recollection">Recollection</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=test_coverage">Test Coverage</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=visualize_topology">Visualize Topology</a></li>
-					<li><a href="<?php echo $parent_page_title; ?>?id=refactoring">Refactoring</a></li>
-				</ul>
-				<!-- END OF PATTERNS LIST -->
+				
+				<?php 
+					
+					$category = "";
+					$counter = 0;
+					$patterns = file_get_contents('ift_patterns.json');
+					$decoded_patterns = json_decode($patterns);
+					foreach ($decoded_patterns as $pattern) {
+						if ($pattern->{'category'} != $category) {
+							$category = $pattern->{'category'};
+							if ($counter > 0) echo "</ul>\n<hr>\n";
+							echo "<li class='group_name'>".$pattern->{'category'}.":</li>\n";
+							echo "<ul>\n";
+							$counter++;
+						}
+						$pattern_name = $pattern->{'pattern'};
+						$pattern_link = str_replace(' ', '_', $pattern_name);
+						$pattern_link = strtolower($pattern_link);
+						echo "<li><a href='$parent_page_title?id=$pattern_link'>$pattern_name</a></li>\n";
+					}
+					
+				?>
+				
+				<!-- END PATTERNS LIST -->
 			</ul>
 		</nav>
 		<!-- END PATTERNS MENU -->
@@ -244,6 +176,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="#" data-toggle="modal" data-target="#primer_modal">IFT Primer</a></li>
+						<li><a href="<?php echo $parent_page_title; ?>?id=putting_ift_into_practice">Putting IFT into Practice</a>
 						<li><a href="<?php echo $parent_page_title; ?>?id=about">About</a></li>
 					</ul>
 					<ul class="navbar navbar-nav navbar-right">
@@ -276,6 +209,7 @@
 		<script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
 		<script src="bower_components/MathJax/MathJax.js"></script>
 		<script src="bower_components/MathJax/config/TeX-AMS-MML_HTMLorMML.js"></script>
+<!-- 		<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script> -->
 		<script>
 			
 			//MATHJAX CONFIG
@@ -284,10 +218,7 @@
 					inlineMath: [['$', '$'], ['\\(', '\\)']],
 					processEscapes: true
 				}
-			});
-			
-			//TODO: JASNY BOOTSTRAP OFF CANVAS MANIPULATION --> DOWN AND OVER ~80%
-			
+			});			
 			
 			// BASIC PAGE SETUP
 			$(document).ready(function() {
@@ -296,8 +227,26 @@
 			    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 				if (width <= 320) {
 					$(".navbar-brand").text("IFT");
+					$("nav#patternsMenu").addClass("off-canvas");
+					$("button.btn.btn-default.navbar-btn").show();
 				}
-			});
+				
+				// CATEGORIES LIST UNDER EACH PATTERN
+				$.getJSON("ift_patterns.json", function(data) {
+					var categories = [];
+					$.each(data, function(key, val) {
+						if (val['pattern'] == "<?php echo $title; ?>") {
+							categories.push("<li><h6>" + val['category'].substring(3) + "</h6></li>");
+						}
+					});
+					
+					$("<ul>", {
+						"class": "categories-list",
+						html: categories.join("")
+					}).insertAfter($("#page_title:eq(1)"));
+				});
+				
+			});			
 			
 		</script>
 		<!-- END JAVASCRIPT -->

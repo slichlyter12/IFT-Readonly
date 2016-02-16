@@ -13,16 +13,16 @@ The finalized design pattern catalog from this community collection process is p
 ===== Our Team =====
 
 <div class='row'>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/nabi.jpg' alt='Tahmid Nabi'>
 			<div class='caption'>
 				<h3>Tahmid Nabi</h3>
-				<p>Master cleanse viral sustainable cardigan, kombucha post-ironic meh knausgaard helvetica selvage craft beer thundercats affogato art party tattooed. Kale chips kogi paleo, cred slow-carb normcore direct trade small batch. Pour-over keffiyeh microdosing, migas pabst artisan chillwave next level. YOLO pickled single-origin coffee, godard tattooed iPhone tousled chambray gentrify. Cronut mixtape pour-over, tote bag hammock everyday carry health goth neutra chicharrones kinfolk forage. Green juice chia hashtag kogi, pinterest irony chambray plaid. Pabst seitan tacos leggings normcore.</p>
+				<p>Tahmid did his Bachelor's degree in Computer Science and Engineering from Bangladesh University of Engineering and Technology. He worked 2.5 years as a web developer and developed an interest in software maintenance, reusability and design patterns. This led to him to pursue Design Patterns-based Software Engineering Research here at Oregon State University.</p>
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/scaffidi.jpg' alt='Christopher Scaffidi'>
 			<div class='caption'>
@@ -31,7 +31,7 @@ The finalized design pattern catalog from this community collection process is p
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/sweeney.jpg' alt='Kyle Sweeney'>
 			<div class='caption'>
@@ -42,7 +42,7 @@ The finalized design pattern catalog from this community collection process is p
 	</div>
 </div>
 <div class='row'>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/lichlyter.jpg' alt='Sam Lichlyter'>
 			<div class='caption'>
@@ -51,21 +51,21 @@ The finalized design pattern catalog from this community collection process is p
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/burnett.jpg' alt='Margaret Burnett'>
 			<div class='caption'>
 				<h3>Margaret Burnett</h3>
-				<p>Kale chips lomo master cleanse, intelligentsia literally letterpress kombucha crucifix vegan sustainable. Pour-over kombucha venmo biodiesel, selfies ramps tousled hammock gochujang. Keffiyeh poutine kombucha whatever swag, neutra seitan fingerstache. Polaroid locavore YOLO williamsburg shabby chic pinterest. Blue bottle pork belly helvetica tilde, cold-pressed XOXO craft beer tote bag chartreuse austin paleo. Occupy selfies hella, chartreuse asymmetrical shabby chic master cleanse humblebrag fashion axe freegan chambray neutra. Leggings tousled kombucha cronut tilde.</p>
+				<p>Margaret Burnett is currently a professor of Computer Science in the School of EECS at Oregon State University. Her research interests are where programming languages, human-computer interaction, and software engineering meet: namely, in visual programming languages and in how programming language and software engineering research can be applied to support end-user programming. She has a long history of research in these issues and others relating to human issues of programming.</p>
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/piorkowski.jpg' alt='David Piorkowski'>
 			<div class='caption'>
 				<h3>David Piorkowski</h3>
-				<p>Sustainable swag meggings, PBR&B gastropub quinoa fashion axe trust fund small batch squid art party letterpress health goth offal. Chartreuse ethical semiotics chia. Cred 3 wolf moon scenester swag leggings. DIY semiotics ramps roof party. Artisan brunch literally scenester selfies, wayfarers tote bag fingerstache cronut distillery quinoa gentrify meh flannel raw denim. Fanny pack chia tote bag tacos. Humblebrag DIY drinking vinegar banh mi typewriter four dollar toast pork belly pickled, messenger bag cray yuccie fap fanny pack quinoa thundercats.</p>
+				<p>David Piorkowski is a Ph.D. student at Oregon State University researching software engineering. David aims to create better tools for software developers to help them debug their code.</p>
 			</div>
 		</div>
 	</div>

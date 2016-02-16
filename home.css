@@ -100,7 +100,7 @@ html, body {
 	clear: both;
 }
 
-@media (max-width: 710px) {
+@media (max-width: 750px) {
 	#citations .left, #citations .right {
 		float: none;
 		display: block;

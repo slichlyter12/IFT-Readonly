@@ -51,6 +51,8 @@ html, body {
 
 #content {
 	margin-top: 40px;
+	width: 70%;
+	float: left;
 }
 
 #content #page_title {
@@ -62,9 +64,16 @@ html, body {
 	font-weight: bold;
 }
 
+#content .non-link {
+	color: white;
+	font-size: 15pt;
+}
+
 #footer {
 	font-size: 8pt;
 	text-align: center;
+	width: 75%;
+	float: left;
 }
 
 .nav .group_name {
@@ -72,15 +81,39 @@ html, body {
 /* 	text-align: center; */
 }
 
-iframe {
-	height: 1000px;
-	width: 100%;
-	border: none;
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+button.btn.btn-default.navbar-btn {
+	display: none;
+}
+
+table td, table th {
+	border: 1px solid grey;
+	padding: 3px;
+}
+
+table tr:hover {
+	background-color: rgba(168,  197,  202, 0.41);
+}
+
+table th {
+	background-color: #A7C4C9;
+}
+
+@media (max-width: 1000px) {
+	button.btn.btn-default.navbar-btn {
+		display: block;
+	}
+	
+	#content {
+		width: 100%;
+	}
+	
+	#footer {
+		width: 100%;
+	}
+	
+	#patternsMenu {
+		right: -300px;
+	}
 }
 
 @media print {
