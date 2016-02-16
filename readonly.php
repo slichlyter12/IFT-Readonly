@@ -34,7 +34,7 @@
 				if ($counter > 0) $contents .= "</div></div>"; // end category
 				if ($counter % 4 == 0 && $counter > 0) $contents .= "</div>"; //end row
 				if ($counter % 4 == 0) $contents .= "<div class='row'>"; //start row
-				$contents .= "<div class='col-xs-3'><div class='list-group'>";
+				$contents .= "<div class='col-md-4'><div class='list-group'>";
 				$contents .= "<a href='#' class='list-group-item active non-link'>".$pattern->{'category'}.":</a>";
 				$counter++;
 			}

@@ -20,6 +20,7 @@
 			$content = $argv[1];
 		}
 		
+		// Print result to stdout
 		echo wiki_markdown($content);
 	}
 	
@@ -31,6 +32,7 @@
 		$content = __convertHeaders($content);
 		$content = __convertParagraphs($content);
 		$content = __convertLists($content);
+		$content = __convertTables($content);
 		$content = __convertImages($content);
 		$content = __convertLinks($content);
 		$content = __convertCitations($content);
@@ -170,6 +172,48 @@
 			// clear list for next iteration
 			unset($uLists);
 		}
+		
+		return $content;
+	}
+	
+	function __convertTables($content) {
+		
+		// Get table headers
+		preg_match_all('/\^\s([\w]+)[\s]+/m', $content, $headers);
+		for ($x = 0; $x < count($headers[0]); $x++) {
+			$header = $headers[1][$x];
+			if ($x == 0) {
+				$content = str_replace($headers[0][$x], "<table><tr><th>".$header."</th>", $content);
+			} else if ($x == count($headers[0]) - 1) {
+				$content = str_replace($headers[0][$x], "<th>".$header."</th></tr>", $content);
+			} else {
+				$content = str_replace($headers[0][$x], "<th>".$header."</th>", $content);
+			}
+		}
+				
+		// Remove last '^'
+		$content = preg_replace('/\>(\^)/m', '>', $content);
+		
+		// Get table rows and table data
+		preg_match_all('/^(\|.*\|)/m', $content, $rows);
+		for ($x = 0; $x < count($rows[0]); $x++) {
+			$row = $rows[1][$x];
+			preg_match_all('/^\|(.+?)\||(.+?)\|$/m', $row, $data);
+			for ($y = 0; $y < count($data[0]); $y++) {
+				if (!empty($data[1][$y])) {
+					$row = str_replace($data[0][$y], "<td>".$data[1][$y]."</td>", $row);
+				} else if (!empty($data[2][$y])) {
+					$row = str_replace($data[0][$y], "<td>".$data[2][$y]."</td>", $row);
+				}
+			}
+			if ($x == count($rows[0]) - 1) {
+				$content = str_replace($rows[0][$x], "<tr>$row</tr></table>", $content);
+			} else {
+				$content = str_replace($rows[0][$x], "<tr>$row</tr>", $content);
+			}
+			
+		}
+		
 		
 		return $content;
 	}

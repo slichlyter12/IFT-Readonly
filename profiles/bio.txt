@@ -13,7 +13,7 @@ The finalized design pattern catalog from this community collection process is p
 ===== Our Team =====
 
 <div class='row'>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/nabi.jpg' alt='Tahmid Nabi'>
 			<div class='caption'>
@@ -22,7 +22,7 @@ The finalized design pattern catalog from this community collection process is p
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/scaffidi.jpg' alt='Christopher Scaffidi'>
 			<div class='caption'>
@@ -31,7 +31,7 @@ The finalized design pattern catalog from this community collection process is p
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/sweeney.jpg' alt='Kyle Sweeney'>
 			<div class='caption'>
@@ -42,7 +42,7 @@ The finalized design pattern catalog from this community collection process is p
 	</div>
 </div>
 <div class='row'>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/lichlyter.jpg' alt='Sam Lichlyter'>
 			<div class='caption'>
@@ -51,7 +51,7 @@ The finalized design pattern catalog from this community collection process is p
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/burnett.jpg' alt='Margaret Burnett'>
 			<div class='caption'>
@@ -60,7 +60,7 @@ The finalized design pattern catalog from this community collection process is p
 			</div>
 		</div>
 	</div>
-	<div class='col-xs-4'>
+	<div class='col-md-4'>
 		<div class='thumbnail'>
 			<img src='img/piorkowski.jpg' alt='David Piorkowski'>
 			<div class='caption'>
