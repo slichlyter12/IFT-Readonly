@@ -9,15 +9,31 @@
 # <http://oregonstate.edu/>
 #
 
-# GLOBALS:
-$page_title = $parent_page_title;
+	# GLOBALS:
+	$page_title = 'readonly.php';
+	
+	// Check if run via command line, check file else use first argument
+	if (isset($argv) && !empty($argv[1])) {
+		if (is_file($argv[1])) {
+			$content = file_get_contents($argv[1]);
+		} else {
+			$content = $argv[1];
+		}
+		
+		// Print result to stdout
+		echo wiki_markdown($content);
+	}
+	
+	
+	# FUNCTION DEFINITIONS:
 	
 	function wiki_markdown($content) {
 		$content = __removeExtras($content);
 		$content = __convertHeaders($content);
 		$content = __convertParagraphs($content);
-		$content = __convertImages($content);
 		$content = __convertLists($content);
+		$content = __convertTables($content);
+		$content = __convertImages($content);
 		$content = __convertLinks($content);
 		$content = __convertCitations($content);
 		$content = __convertBold($content);
@@ -31,7 +47,7 @@ $page_title = $parent_page_title;
 	
 	function __removeExtras($content) {
 		
-		$content = str_replace('~~REFNOTES~~', '', $content);
+		$content = preg_replace('/~~.+?~~/', '', $content);
 		$content = preg_replace('/<html\b[^>]*>(.*?)<\/html>/i', '', $content);
 		return $content;
 	}
@@ -160,6 +176,48 @@ $page_title = $parent_page_title;
 		return $content;
 	}
 	
+	function __convertTables($content) {
+		
+		// Get table headers
+		preg_match_all('/\^\s([\w]+)[\s]+/m', $content, $headers);
+		for ($x = 0; $x < count($headers[0]); $x++) {
+			$header = $headers[1][$x];
+			if ($x == 0) {
+				$content = str_replace($headers[0][$x], "<table><tr><th>".$header."</th>", $content);
+			} else if ($x == count($headers[0]) - 1) {
+				$content = str_replace($headers[0][$x], "<th>".$header."</th></tr>", $content);
+			} else {
+				$content = str_replace($headers[0][$x], "<th>".$header."</th>", $content);
+			}
+		}
+				
+		// Remove last '^'
+		$content = preg_replace('/\>(\^)/m', '>', $content);
+		
+		// Get table rows and table data
+		preg_match_all('/^(\|.*\|)/m', $content, $rows);
+		for ($x = 0; $x < count($rows[0]); $x++) {
+			$row = $rows[1][$x];
+			preg_match_all('/^\|(.+?)\||(.+?)\|$/m', $row, $data);
+			for ($y = 0; $y < count($data[0]); $y++) {
+				if (!empty($data[1][$y])) {
+					$row = str_replace($data[0][$y], "<td>".$data[1][$y]."</td>", $row);
+				} else if (!empty($data[2][$y])) {
+					$row = str_replace($data[0][$y], "<td>".$data[2][$y]."</td>", $row);
+				}
+			}
+			if ($x == count($rows[0]) - 1) {
+				$content = str_replace($rows[0][$x], "<tr>$row</tr></table>", $content);
+			} else {
+				$content = str_replace($rows[0][$x], "<tr>$row</tr>", $content);
+			}
+			
+		}
+		
+		
+		return $content;
+	}
+	
 	function __convertLinks($content) {
 		
 		// Links with titles
@@ -210,11 +268,15 @@ $page_title = $parent_page_title;
 		// loop through and replace images
 		for ($x = 0; $x < count($images); $x++) {
 			
+			// check if false positive
+			if (empty($images[$x]))
+				return $content;
+			
 			// flag to check if image found
 			$pass = 1;
 			
 			// start image tag
-			$image_tag = "<img src='data/media/";
+			$image_tag = "<img src='img/";
 			
 			// get image details --> [1] = directory name; [2] = filename; [3] = width; [4] = height;
 			if (!preg_match('/(.*):(.*)[\?|\|]([[:digit:]]*)\*?([[:digit:]]*)/', $images[1][$x], $image_details))
@@ -222,7 +284,7 @@ $page_title = $parent_page_title;
 			
 			// set image path
 			if (isset($image_details[1]) && isset($image_details[2])) {
-				$image_tag .= $image_details[1]."/".$image_details[2]."'";
+				$image_tag .= $image_details[2]."'";
 			} else if (isset($image_details[1])) {
 				$image_tag .= $image_details[1]."'";
 			} else {
@@ -230,12 +292,14 @@ $page_title = $parent_page_title;
 				$pass = 0;
 			}
 			
-			// set image size; default = 800w X autoh
+			// set image size; default = 800W X autoH
 			if (isset($image_details[3]) && !empty($image_details[3])) {
 				$image_tag .= " style='width: ".$image_details[3]."px; height: auto;'";
 			} else if (isset($image_details[4]) && !empty($image_details[4])) {
 				$image_tag .= " style='height: ".$image_details[4]."px; width: auto;'";
-			} 
+			} else {
+				$image_tag .= " style='width: 100%; height: auto;'";
+			}
 			
 			// set alt text
 			if (isset($images[2][$x]) && !empty($images[2][$x])) {

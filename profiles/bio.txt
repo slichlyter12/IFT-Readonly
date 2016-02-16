@@ -1,0 +1,72 @@
+====== About ======
+					
+===== Where did this wiki come from? =====
+In "An information foraging theory perspective on tools for debugging, refactoring, and reuse tasks", (TOSEM 22(2), 14) Fleming et al. demonstrated that IFT can be used to obtain insights into how and why software engineering tools can aid developers. The key contribution of this work was looking at successful tools through an IFT lens and generalizing specific tool designs to independent, generalizable and reusable IFT-based design patterns.
+
+This project is a continuation of that work. Our goal is to collect and document IFT-based
+Design patterns from software engineering tool builders. This design pattern catalog will serve as a valuable resource for tool builders to design better tools for software engineers.
+
+To collect IFT-based design patterns from tool builders, we used a composite of civic participation and shepherding. At first, we created a community wiki containing training materials and invited software engineering researchers to document their own tool design insights tool design insights in the form of design patterns. We also helped our contributors to improve and finalize their design patterns by providing continuous feedback to their work. 
+
+The finalized design pattern catalog from this community collection process is presented here.
+
+===== Our Team =====
+
+<div class='row'>
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/nabi.jpg' alt='Tahmid Nabi'>
+			<div class='caption'>
+				<h3>Tahmid Nabi</h3>
+				<p>Tahmid did his Bachelor's degree in Computer Science and Engineering from Bangladesh University of Engineering and Technology. He worked 2.5 years as a web developer and developed an interest in software maintenance, reusability and design patterns. This led to him to pursue Design Patterns-based Software Engineering Research here at Oregon State University.</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/scaffidi.jpg' alt='Christopher Scaffidi'>
+			<div class='caption'>
+				<h3>Christopher Scaffidi</h3>
+				<p>Christopher Scaffidi earned a Ph.D. in software engineering from Carnegie Mellon University, an M.S.E. in software engineering from Carnegie Mellon University, a M.S. in physics from Princeton University, and a B.S. in mathematics and physics from the University of Wisconsin in Madison. He is currently an associate professor of computer science in the School of EECS at Oregon State University. His research interests are where human-computer interaction and software engineering intersect. Most of his current projects aim to help software users to create code for themselves, and to effectively share that code with one another.</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/sweeney.jpg' alt='Kyle Sweeney'>
+			<div class='caption'>
+				<h3>Kyle Sweeney</h3>
+				<p>Kyle Sweeney began programming at the age of 15 when he made a text version of sim-city in python. Since then he has proceeded to expand his knowledge of computer science and has been conducting research for Professor Scaffidi for the last year and a half as an undergraduate research assistant.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='row'>
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/lichlyter.jpg' alt='Sam Lichlyter'>
+			<div class='caption'>
+				<h3>Sam Lichlyter</h3>
+				<p>Sam Lichlyter has been writing computer programs and websites for over ten years. He has worked on projects both big and small, from his parents' pharmacy's E-Commerce site to educational web applications for the University of Washington. Sam is a Computer Science Undergraduate (and a Psychology Minor) with a passion for web and iOS development.</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/burnett.jpg' alt='Margaret Burnett'>
+			<div class='caption'>
+				<h3>Margaret Burnett</h3>
+				<p>Margaret Burnett is currently a professor of Computer Science in the School of EECS at Oregon State University. Her research interests are where programming languages, human-computer interaction, and software engineering meet: namely, in visual programming languages and in how programming language and software engineering research can be applied to support end-user programming. She has a long history of research in these issues and others relating to human issues of programming.</p>
+			</div>
+		</div>
+	</div>
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/piorkowski.jpg' alt='David Piorkowski'>
+			<div class='caption'>
+				<h3>David Piorkowski</h3>
+				<p>David Piorkowski is a Ph.D. student at Oregon State University researching software engineering. David aims to create better tools for software developers to help them debug their code.</p>
+			</div>
+		</div>
+	</div>
+</div>

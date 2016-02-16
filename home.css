@@ -1,0 +1,111 @@
+html, body {
+	width: 100%;
+}
+
+#header {
+	background-color: #0D3182;
+	color: white;
+	padding: 7px;
+	text-align: center;
+	margin: 20px;
+	height: auto;
+}
+
+#header a {
+	color: white;
+	text-decoration: none;
+}
+
+#header a:hover {
+	text-decoration: underline;
+}
+
+#desc {
+	font-size: 14pt;
+}
+
+#contributors {
+	font-size: 12pt;
+}
+
+#citations {
+	padding-top: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+	font-size: 10pt;
+	text-align: left;
+}
+
+.question {
+	font-size: 15pt;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.centered {
+	text-align: center;
+}
+
+.align {
+	margin-left: 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+.focus-rect {
+	border: 1px solid black;
+	border-radius: 30px;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	margin: 5px;
+}
+
+.round-rect {
+	border: 1px solid black;
+	border-radius: 60px;
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	margin: 5px;
+	background-color: #dedede;
+}
+
+.left-rects {
+	display: inline-block;
+	width: 52%;
+	float: left;
+}
+
+.right-rects {
+	width: 40%;
+	display: inline-block;
+	float: right;
+}
+
+#orange {
+	background-color: #C34500;
+	color: white;
+}
+
+#contact {
+	clear: both;
+}
+
+@media (max-width: 750px) {
+	#citations .left, #citations .right {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
