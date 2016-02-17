@@ -293,6 +293,7 @@
 			}
 			
 			// set image size; default = 800W X autoH
+/*
 			if (isset($image_details[3]) && !empty($image_details[3])) {
 				$image_tag .= " style='width: ".$image_details[3]."px; height: auto;'";
 			} else if (isset($image_details[4]) && !empty($image_details[4])) {
@@ -300,6 +301,9 @@
 			} else {
 				$image_tag .= " style='width: 100%; height: auto;'";
 			}
+*/
+
+			$image_tag .= " style='width: 100%; height: auto;";
 			
 			// set alt text
 			if (isset($images[2][$x]) && !empty($images[2][$x])) {
