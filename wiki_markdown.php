@@ -265,13 +265,19 @@
 		// get images --> [1] = image path, maybe size; [2] = maybe image description;
 		preg_match_all('/\[?\{{2}(.*)\|(.*)\}{2}\]?/m', $content, $images);
 		
+		var_dump($images);
+		
+		echo "<br><br>";
+		
+		echo count($images);
+		
 		// loop through and replace images
-		for ($x = 0; $x < count($images); $x++) {
+		for ($x = 0; $x < count($images[0]); $x++) {
 			
 			// check if false positive
-			if (empty($images[$x]))
+			if (empty($images[0][$x]))
 				return $content;
-			
+						
 			// flag to check if image found
 			$pass = 1;
 			
@@ -279,7 +285,7 @@
 			$image_tag = "<img src='img/";
 			
 			// get image details --> [1] = directory name; [2] = filename; [3] = width; [4] = height;
-			if (!preg_match('/(.*):(.*)[\?|\|]([[:digit:]]*)\*?([[:digit:]]*)/', $images[1][$x], $image_details))
+			if (preg_match('/(.*):(.*)[\?|\|]([[:digit:]]*)\*?([[:digit:]]*)/', $images[1][$x], $image_details) == FALSE)
 				preg_match('/:(.*)/', $images[1][$x], $image_details);
 			
 			// set image path
@@ -303,7 +309,7 @@
 			}
 */
 
-			$image_tag .= " style='width: 100%; height: auto;";
+			$image_tag .= " style='width: 100%; height: auto;'";
 			
 			// set alt text
 			if (isset($images[2][$x]) && !empty($images[2][$x])) {
@@ -312,6 +318,8 @@
 			
 			// close image tag
 			$image_tag .= " >";
+			
+// 			echo $image_tag;
 			
 			// check if image found; if so, display; if not, show error;
 			if ($pass)
