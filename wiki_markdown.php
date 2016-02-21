@@ -265,12 +265,6 @@
 		// get images --> [1] = image path, maybe size; [2] = maybe image description;
 		preg_match_all('/\[?\{{2}(.*)\|(.*)\}{2}\]?/m', $content, $images);
 		
-		var_dump($images);
-		
-		echo "<br><br>";
-		
-		echo count($images);
-		
 		// loop through and replace images
 		for ($x = 0; $x < count($images[0]); $x++) {
 			
