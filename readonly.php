@@ -50,6 +50,12 @@
 		$contents = file_get_contents("profiles/bio.txt");
 	}
 	
+/*
+	if ($page_id == "additional_pattern_insights") {
+		$contents = file_get_contents("additional_pattern_insights.txt");
+	}
+*/
+	
 	// Check if directory is given, set data directory to given directory
 	if (preg_match('/http(.*)/', $page_id, $given_dir)) {
 		header("Location: ".$given_dir[0]);
@@ -177,6 +183,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="#" data-toggle="modal" data-target="#primer_modal">IFT Primer</a></li>
 						<li><a href="<?php echo $parent_page_title; ?>?id=putting_ift_into_practice">Putting IFT into Practice</a>
+						<li><a href="<?php echo $parent_page_title; ?>?id=additional_pattern_insights">Additional Pattern Insights</a>
 						<li><a href="<?php echo $parent_page_title; ?>?id=about">About</a></li>
 					</ul>
 					<ul class="navbar navbar-nav navbar-right">
