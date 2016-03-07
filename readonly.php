@@ -18,7 +18,7 @@
 		$title = "Home";
 		$contents = file_get_contents('home.txt');
 	}
-	
+		
 	if ($page_id == "putting_ift_into_practice") {
 		$title = "Putting IFT into Practice";
 		$contents = file_get_contents('putting_ift_into_practice.txt');
@@ -217,6 +217,7 @@
 		<script src="bower_components/MathJax/MathJax.js"></script>
 		<script src="bower_components/MathJax/config/TeX-AMS-MML_HTMLorMML.js"></script>
 <!-- 		<script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script> -->
+		<script src="bower_components/image-map-resizer/js/imageMapResizer.min.js"></script>
 		<script>
 			
 			//MATHJAX CONFIG
@@ -232,7 +233,7 @@
 				
 				// IF ON MOBILE CHANGE SITE TITLE TO "IFT"
 			    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-				if (width <= 320) {
+				if (width <= 325) {
 					$(".navbar-brand").text("IFT");
 					$("nav#patternsMenu").addClass("off-canvas");
 					$("button.btn.btn-default.navbar-btn").show();
@@ -252,6 +253,46 @@
 						html: categories.join("")
 					}).insertAfter($("#page_title:eq(1)"));
 				});
+				
+				// LOAD FILENAME INTO ID FOR EACH IMG
+				$("img").each(function () {
+					var path = $(this).attr("src");
+					var name = path.substr(4, path.length - 8);
+					$(this).attr("id", name);
+				});
+				
+				<?php 
+					
+					if ($page_id == "additional_pattern_insights") {
+						
+						echo "// GET IMAGE MAPS\n";
+						echo "$('img').each(function() {
+					var id = $(this).attr('id');
+					switch(id) {
+						case 'subpatterns':
+							$(this).attr('usemap', '#subpatternsmap');
+                            $(this).after(\"<map name='subpatternsmap' > <area  alt='Information Feature Decorator' title='Information Feature Decorator' href='?id=information_feature_decorator' shape='rect' coords='24,56,193,103' style='outline:none;' target='_self'     /> <area  alt='Fault Localization' title='Fault Localization' href='?id=fault_localization' shape='rect' coords='207,53,376,100' style='outline:none;' target='_self'     /> <area  alt='Gather Together' title='Gather Together' href='?id=gather_together' shape='rect' coords='403,53,572,100' style='outline:none;' target='_self'     /> <area  alt='Software Visualization' title='Software Visualization' href='?id=software_visualization' shape='rect' coords='599,54,768,101' style='outline:none;' target='_self'     /> <area  alt='Signpost' title='Signpost' href='?id=signpost' shape='rect' coords='798,55,967,102' style='outline:none;' target='_self'     /> <area  alt='Cue Decoration' title='Cue Decoration' href='?id=cue_decoration' shape='rect' coords='26,192,195,239' style='outline:none;' target='_self'     /> <area  alt='Regression Fault Localization' title='Regression Fault Localization' href='?id=regression_fault_localization' shape='rect' coords='206,192,375,239' style='outline:none;' target='_self'     /> <area  alt='Reduce Duplicate Information' title='Reduce Duplicate Information' href='?id=reduce_duplicate_information' shape='rect' coords='290,259,459,306' style='outline:none;' target='_self'     /> <area  alt='Path Search' title='Path Search' href='?id=path_search' shape='rect' coords='508,261,677,308' style='outline:none;' target='_self'     /> <area  alt='Visualize Topology' title='Visualize Topology' href='?id=visualize_topology' shape='rect' coords='599,191,768,238' style='outline:none;' target='_self'     /> <area  alt='Rename Refactoring' title='Rename Refactoring' href='?id=rename_refactoring' shape='rect' coords='800,192,969,239' style='outline:none;' target='_self'     /> <area shape='rect' coords='994,337,996,339' alt='Image Map' style='outline:none;' title='Image Map' href='http://www.image-maps.com/index.php?aff=mapped_users_0' /> </map>\");
+							break;
+						case 'concurrent':
+							$(this).attr('usemap', '#concurrentmap');
+							$(this).after(\"<map name='concurrentmap' > <area  alt='Software Visualization' title='Software Visualization' href='?id=software_visualization' shape='rect' coords='302,22,421,137' style='outline:none;' target='_self'     /> <area  alt='Bookmark' title='Bookmark' href='?id=bookmark' shape='rect' coords='513,33,632,148' style='outline:none;' target='_self'     /> <area  alt='Dashboard' title='Dashboard' href='?id=dashboard' shape='rect' coords='87,102,206,217' style='outline:none;' target='_self'     /> <area  alt='Cue Decoration' title='Cue Decoration' href='?id=cue_decoration' shape='rect' coords='404,172,523,287' style='outline:none;' target='_self'     /> <area  alt='Structural Relatedness' title='Structural Relatedness' href='?id=structural_relatedness' shape='rect' coords='729,136,848,251' style='outline:none;' target='_self'     /> <area  alt='Notifier' title='Notifier' href='?id=notifier' shape='rect' coords='37,250,156,365' style='outline:none;' target='_self'     /> <area  alt='Community Portal' title='Community Portal' href='?id=community_portal' shape='rect' coords='236,314,355,429' style='outline:none;' target='_self'     /> <area  alt='Gather Together' title='Gather Together' href='?id=gather_together' shape='rect' coords='654,313,773,428' style='outline:none;' target='_self'     /> <area  alt='Signpost' title='Signpost' href='?id=signpost' shape='rect' coords='833,388,952,503' style='outline:none;' target='_self'     /> <area  alt='Filtering' title='Filtering' href='?id=filtering' shape='rect' coords='600,473,719,588' style='outline:none;' target='_self'     /> <area  alt='Path Search' title='Path Search' href='?id=path_search' shape='rect' coords='196,444,315,559' style='outline:none;' target='_self'     /> <area  alt='Visualize Topology' title='Visualize Topology' href='?id=visualize_topology' shape='rect' coords='25,446,144,561' style='outline:none;' target='_self'     /> <area shape='rect' coords='957,589,959,591' alt='Image Map' style='outline:none;' title='Image Map' href='http://www.image-maps.com/index.php?aff=mapped_users_0' /> </map>\");
+							break;
+						case 'pipeline':
+							$(this).attr('usemap', '#pipelinemap');
+							$(this).after(\"<map name='pipelinemap' > <area  alt='Lexical Similarity' title='Lexical Similarity' href='?id=lexical_similarity' shape='rect' coords='33,51,202,100' style='outline:none;' target='_self'     /> <area  alt='Patch Profitability' title='Patch Profitability' href='?id=patch_profitability' shape='rect' coords='623,56,792,105' style='outline:none;' target='_self'     /> <area  alt='Recollection' title='Recollection' href='?id=recollection' shape='rect' coords='623,184,792,233' style='outline:none;' target='_self'     /> <area  alt='Filtering' title='Filtering' href='?id=filtering' shape='rect' coords='34,313,203,362' style='outline:none;' target='_self'     /> <area  alt='Shopping Cart' title='Shopping Cart' href='?id=shopping_cart' shape='rect' coords='623,313,792,362' style='outline:none;' target='_self'     /> <area shape='rect' coords='808,383,810,385' alt='Image Map' style='outline:none;' title='Image Map' href='http://www.image-maps.com/index.php?aff=mapped_users_0' /> </map>\");
+							break;
+						case 'sameinputs':
+							$(this).attr('usemap', '#sameinputsmap');
+							$(this).after(\"<map name='sameinputsmap'> <area  alt='Feature Tracing' title='Feature Tracing' href='?id=feature_tracing' shape='rect' coords='194,51,326,98' style='outline:none;' target='_self'     /> <area  alt='Test Coverage' title='Test Coverage' href='?id=test_coverage' shape='rect' coords='495,50,627,97' style='outline:none;' target='_self'     /> <area  alt='Impact Location' title='Impact Location' href='?id=impact_location' shape='rect' coords='646,51,778,98' style='outline:none;' target='_self'     /> <area  alt='Documentation Processing' title='Documentation Processing' href='?id=documentation_processing' shape='rect' coords='795,52,927,99' style='outline:none;' target='_self'     /> <area  alt='Regression Fault Localization' title='Regression Fault Localization' href='?id=regression_fault_localization' shape='rect' coords='42,348,174,395' style='outline:none;' target='_self'     /> <area  alt='Fault Localization' title='Fault Localization' href='?id=fault_localization' shape='rect' coords='193,349,325,396' style='outline:none;' target='_self'     /> <area  alt='Specification Matcher' title='Specification Matcher' href='?id=specification_matcher' shape='rect' coords='342,349,474,396' style='outline:none;' target='_self'     /> <area  alt='Structural Relatedness' title='Structural Relatedness' href='?id=structural_relatedness' shape='rect' coords='645,349,777,396' style='outline:none;' target='_self'     /> <area  alt='Lexical Similarity' title='Lexical Similarity' href='?id=lexical_similarity' shape='rect' coords='794,349,926,396' style='outline:none;' target='_self'     /> <area shape='rect' coords='954,420,956,422' alt='Image Map' style='outline:none;' title='Image Map' href='http://www.image-maps.com/index.php?aff=mapped_users_0' /> </map>\");
+							break;
+					}
+				});";
+					
+						echo "// UPDATE IMAGE MAPS\n";
+						echo "$('map').imageMapResize();\n";
+					}
+										
+				?>
 				
 			});			
 			
