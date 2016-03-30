@@ -98,6 +98,16 @@ table th {
 	background-color: #A7C4C9;
 }
 
+.categories-list {
+	text-align: center;
+}
+
+.categories-list li {
+	list-style: none;
+	text-align: center;
+	display: inline-block;
+}
+
 @media (max-width: 1000px) {
 	button.btn.btn-default.navbar-btn {
 		display: block;

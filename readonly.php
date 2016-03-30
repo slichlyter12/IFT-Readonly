@@ -50,11 +50,6 @@
 		$contents = file_get_contents("profiles/bio.txt");
 	}
 	
-/*
-	if ($page_id == "additional_pattern_insights") {
-		$contents = file_get_contents("additional_pattern_insights.txt");
-	}
-*/
 	
 	// Check if directory is given, set data directory to given directory
 	if (preg_match('/http(.*)/', $page_id, $given_dir)) {
@@ -231,7 +226,7 @@
 			// BASIC PAGE SETUP
 			$(document).ready(function() {
 				
-				// IF ON MOBILE CHANGE SITE TITLE TO "IFT"
+				// CHANGE SITE TITLE TO "IFT" ON MOBILE
 			    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 				if (width <= 325) {
 					$(".navbar-brand").text("IFT");
@@ -247,11 +242,12 @@
 							categories.push("<li><h6>" + val['category'].substring(3) + "</h6></li>");
 						}
 					});
-					
+									
 					$("<ul>", {
 						"class": "categories-list",
-						html: categories.join("")
-					}).insertAfter($("#page_title:eq(1)"));
+						"html": categories.join(", ")
+					}).insertAfter($("div #page_title:eq(1)"));
+					
 				});
 				
 				// LOAD FILENAME INTO ID FOR EACH IMG
