@@ -47,7 +47,7 @@ The finalized design pattern catalog from this community collection process is p
 			<img src='img/lichlyter.jpg' alt='Sam Lichlyter'>
 			<div class='caption'>
 				<h3>Sam Lichlyter</h3>
-				<p>Sam Lichlyter has been writing computer programs and websites for over ten years. He has worked on projects both big and small, from his parents' pharmacy's E-Commerce site to educational web applications for the University of Washington. Sam is a Computer Science Undergraduate (and a Psychology Minor) with a passion for web and iOS development.</p>
+				<p>Sam Lichlyter has been writing computer programs and websites for over ten years. He has worked on projects both big and small, from his parents' pharmacy's E-Commerce site to educational web applications for the University of Washington. Sam is a Computer Science Undergraduate (also pursuing a Psychology Minor) with a passion for web and iOS development.</p>
 			</div>
 		</div>
 	</div>
@@ -66,6 +66,17 @@ The finalized design pattern catalog from this community collection process is p
 			<div class='caption'>
 				<h3>David Piorkowski</h3>
 				<p>David Piorkowski is a Ph.D. student at Oregon State University researching software engineering. David aims to create better tools for software developers to help them debug their code.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class='col-md-4'>
+		<div class='thumbnail'>
+			<img src='img/fleming.jpg' alt='Scott Fleming'>
+			<div class='caption'>
+				<h3>Scott Fleming</h3>
+				<p>Scott Fleming is currently an Assistant Professor of Computer Science at the University of Memphis. He conducts research in the areas of software engineering and human-computer interaction. A key focus of his work is applying theories, principles, and methods from HCI to the problems of software engineering. For example, his past work has both advanced understanding of people (software developers) as well as contributed novel tools and environments for software engineering.</p>
 			</div>
 		</div>
 	</div>
